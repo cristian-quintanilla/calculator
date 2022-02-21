@@ -1,11 +1,24 @@
 .option-item {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .option-item:hover {
-  background-color: #F1F1F1F1;
-  cursor: pointer;
+	background-color: #F1F1F1F1;
+	cursor: pointer;
+}
+
+.results {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+	.results {
+		flex-direction: column;
+	}
 }
