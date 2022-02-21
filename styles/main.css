@@ -1,0 +1,11 @@
+.option-item {
+  display: flex;
+  align-items: center;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.option-item:hover {
+  background-color: #F1F1F1F1;
+  cursor: pointer;
+}
