@@ -97,7 +97,7 @@
 			</div>
 		</section> -->
 
-		<section id='imcDiv' class='d-flex flex-column align-items-center'>
+		<!-- <section id='imcDiv' class='d-flex flex-column align-items-center'>
 			<h3 class='mb-4'>IMC</h3>
 
 			<div class='row'>
@@ -159,6 +159,50 @@
 				<div class='fw-light'>18.5</div>
 				<div class='fw-light'>25.0</div>
 				<div class='fw-light'>40.0</div>
+			</div>
+		</section> -->
+
+		<section id='dateDiv' class='d-flex flex-column align-items-center'>
+			<h3 class='mb-4'>Fecha</h3>
+
+			<div class='row d-flex align-items-center'>
+				<div class='col-6 col-md-2 p-1'>
+					<label for='fromDate'>Desde:</label>
+				</div>
+
+				<div class='col-6 col-md-4 p-1'>
+					<input type='date' class='form-control' id='fromDate'>
+				</div>
+
+				<div class='col-6 col-md-2 p-1'>
+					<label for='toDate'>Hasta:</label>
+				</div>
+
+				<div class='col-6 col-md-4 p-1'>
+					<input type='date' class='form-control' id='toDate'>
+				</div>
+
+				<div class='col d-grid p-1'>
+					<button class='btn btn-primary'>Calcular</button>
+				</div>
+			</div>
+
+			<div class='d-flex flex-column align-items-center gap-2 pt-2 pb-4 mt-3 w-75 card'>
+				<div class='fw-bold fs-2 text-primary'>Diferencia</div>
+				<div class='d-flex justify-content-evenly py-2 border-2 border-bottom border-top border-primary w-100'>
+					<div class='d-flex flex-column align-items-center'>
+						<span>Años</span>
+						<h3>0</h3>
+					</div>
+					<div class='d-flex flex-column align-items-center'>
+						<span>Meses</span>
+						<h3>0</h3>
+					</div>
+					<div class='d-flex flex-column align-items-center'>
+						<span>Días</span>
+						<h3>0</h3>
+					</div>
+				</div>
 			</div>
 		</section>
 	</main>
