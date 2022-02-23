@@ -31,6 +31,10 @@ class Data extends Forms {
 			this.MBConvertions(toValue, this.K);
 		} else if (fromValue === 'GB') {
 			this.GBConvertions(toValue, this.K);
+		} else if (fromValue === 'TB') {
+			this.TBConvertions(toValue, this.K);
+		} else if (fromValue === 'PB') {
+			this.PBConvertions(toValue, this.K);
 		}
 
 		// Clean the results and show the new results
@@ -120,6 +124,48 @@ class Data extends Forms {
 			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'PB') {
 			this.value_2 = `${ this.dataValue * K * K / (K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		}
+	}
+
+	TBConvertions(toValue, K) {
+		if (toValue === 'TB') {
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'B') {
+			this.value_2 = `${ this.dataValue * K * K * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'KB') {
+			this.value_2 = `${ this.dataValue * K * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'MB') {
+			this.value_2 = `${ this.dataValue * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'GB') {
+			this.value_2 = `${ this.dataValue * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'PB') {
+			this.value_2 = `${ this.dataValue * K * K / (K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		}
+	}
+
+	PBConvertions(toValue, K) {
+		if (toValue === 'PB') {
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'B') {
+			this.value_2 = `${ this.dataValue * K * K * K * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'KB') {
+			this.value_2 = `${ this.dataValue * K * K * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'MB') {
+			this.value_2 = `${ this.dataValue * K * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'GB') {
+			this.value_2 = `${ this.dataValue * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'TB') {
+			this.value_2 = `${ this.dataValue * K } ${ toValue }`;
 			this.showResult(this.value_1, this.value_2);
 		}
 	}
