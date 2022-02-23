@@ -17,7 +17,7 @@
 	justify-content: space-evenly;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 	.results {
 		flex-direction: column;
 	}
