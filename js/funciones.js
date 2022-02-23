@@ -17,8 +17,6 @@ function showForm(id) {
 		// case 'imcDiv':
 		// 	new IMC();
 		// 	break;
-		default:
-			new Data();
 	}
 }
 
