@@ -3,11 +3,11 @@ export const DATA_DIV = `
 
 	<div class='row'>
 		<div class='col-6 col-md-3 p-1'>
-			<input type='number' class='form-control' value='1' min='1' />
+			<input id='dataValue' type='number' class='form-control' value='1' min='1' />
 		</div>
 
 		<div class='col-6 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='fromData' class='form-select'>
 				<option value='B'>Byte</option>
 				<option value='KB'>Kilobyte</option>
 				<option value='MB'>Megabyte</option>
@@ -22,7 +22,7 @@ export const DATA_DIV = `
 		</div>
 
 		<div class='col-12 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='toData' class='form-select'>
 				<option value='B'>Byte</option>
 				<option value='KB'>Kilobyte</option>
 				<option value='MB'>Megabyte</option>
@@ -33,14 +33,8 @@ export const DATA_DIV = `
 		</div>
 
 		<div class='col d-grid p-1'>
-			<button class='btn btn-primary'>Calcular</button>
+			<button id='calculateData' class='btn btn-primary'>Calcular</button>
 		</div>
-	</div>
-
-	<div class='results bg-light py-2 px-4 mt-3 w-75 card'>
-		<div class='fw-bold fs-4 text-primary'>1 Byte</div>
-		<span class='text-success fs-6'>es igual a</span>
-		<div class='fw-bold fs-4 text-primary'>0.0000976 Kilobyte</div>
 	</div>
 `;
 
@@ -63,7 +57,7 @@ export const IMC_DIV = `
 		</div>
 	</div>
 
-	<div class='d-flex justify-content-center py-2 px-4 mt-3 w-75'>
+	<!-- <div class='d-flex justify-content-center py-2 px-4 mt-3 w-75'>
 		<div class='d-flex justify-content-evenly border-2 border-bottom border-primary w-50'>
 			<div class='fs-1 fw-bold text-primary'>20.8</div>
 			<div>
@@ -106,7 +100,7 @@ export const IMC_DIV = `
 		<div class='fw-light'>18.5</div>
 		<div class='fw-light'>25.0</div>
 		<div class='fw-light'>40.0</div>
-	</div>
+	</div>  -->
 `;
 
 export const DATE_DIV = `

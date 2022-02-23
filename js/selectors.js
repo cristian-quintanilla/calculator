@@ -1,6 +1,6 @@
-const $ = selector => document.querySelector(selector);
+export const $ = selector => document.querySelector(selector);
 
-// Menú
+//* Menú
 export const data = $('#data');
 export const imc = $('#imc');
 export const date = $('#date');
@@ -10,5 +10,5 @@ export const area = $('#area');
 export const length = $('#length');
 export const temperature = $('#temperature');
 
-// Form
+//* Form
 export const sectionForm = $('#sectionForm');
