@@ -20,12 +20,17 @@ class Data extends Forms {
 		this.results = $('.results');
 		this.dataValue = $('#dataValue').value;
 		this.value_1 = `${ this.dataValue } ${ fromValue }`;
+		this.value_2 = `${ this.dataValue } ${ toValue }`;
 
 		// Convertions
 		if (fromValue === 'B') {
 			this.ByteConvertions(toValue, this.K);
 		} else if (fromValue === 'KB') {
 			this.KBConvertions(toValue, this.K);
+		} else if (fromValue === 'MB') {
+			this.MBConvertions(toValue, this.K);
+		} else if (fromValue === 'GB') {
+			this.GBConvertions(toValue, this.K);
 		}
 
 		// Clean the results and show the new results
@@ -36,48 +41,86 @@ class Data extends Forms {
 	}
 
 	ByteConvertions(toValue, K) {
-		let value_2 = `${ this.dataValue } ${ toValue }`;
-
 		if (toValue === 'B') {
-			this.showResult(this.value_1, value_2);
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'KB') {
-			value_2 = `${ this.dataValue / K } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue / K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'MB') {
-			value_2 = `${ this.dataValue / (K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue / (K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'GB') {
-			value_2 = `${ this.dataValue / (K * K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue / (K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'TB') {
-			value_2 = `${ this.dataValue / (K * K * K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue / (K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'PB') {
-			value_2 = `${ this.dataValue / (K * K * K * K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue / (K * K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		}
 	}
 
 	KBConvertions(toValue, K) {
-		let value_2 = `${ this.dataValue } ${ toValue }`;
-
 		if (toValue === 'KB') {
-			this.showResult(this.value_1, value_2);
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'B') {
-			value_2 = `${ this.dataValue * K } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'MB') {
-			value_2 = `${ this.dataValue * K / (K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue * K / (K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'GB') {
-			value_2 = `${ this.dataValue * K / (K * K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue * K / (K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'TB') {
-			value_2 = `${ this.dataValue * K / (K * K * K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue * K / (K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		} else if (toValue === 'PB') {
-			value_2 = `${ this.dataValue * K / (K * K * K * K * K) } ${ toValue }`;
-			this.showResult(this.value_1, value_2);
+			this.value_2 = `${ this.dataValue * K / (K * K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		}
+	}
+
+	MBConvertions(toValue, K) {
+		if (toValue === 'MB') {
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'B') {
+			this.value_2 = `${ this.dataValue * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'KB') {
+			this.value_2 = `${ this.dataValue * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'GB') {
+			this.value_2 = `${ this.dataValue * K / (K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'TB') {
+			this.value_2 = `${ this.dataValue * K / (K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'PB') {
+			this.value_2 = `${ this.dataValue * K / (K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		}
+	}
+
+	GBConvertions(toValue, K) {
+		if (toValue === 'GB') {
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'B') {
+			this.value_2 = `${ this.dataValue * K * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'KB') {
+			this.value_2 = `${ this.dataValue * K * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'MB') {
+			this.value_2 = `${ this.dataValue * K } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'TB') {
+			this.value_2 = `${ this.dataValue * K * K / (K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
+		} else if (toValue === 'PB') {
+			this.value_2 = `${ this.dataValue * K * K / (K * K * K * K) } ${ toValue }`;
+			this.showResult(this.value_1, this.value_2);
 		}
 	}
 
