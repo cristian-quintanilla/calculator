@@ -1,5 +1,5 @@
 import Forms from './Forms';
-import { $, data } from '../selectors';
+import { $ } from '../selectors';
 
 class Data extends Forms {
 	constructor() {

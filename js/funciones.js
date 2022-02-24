@@ -1,8 +1,9 @@
 import { sectionForm } from './selectors';
 
 import Data from './classes/Data';
-import IMC from './classes/IMC';
 import DateClass from './classes/Date';
+import IMC from './classes/IMC';
+import Volume from './classes/Volume';
 
 export function show(div, id) {
 	limpiarHTML();
@@ -21,6 +22,9 @@ function showForm(id) {
 			break;
 		case 'dateDiv':
 			new DateClass();
+			break;
+		case 'volumeDiv':
+			new Volume();
 			break;
 	}
 }
