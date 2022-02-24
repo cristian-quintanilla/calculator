@@ -30,10 +30,10 @@ class IMC extends Forms {
 
 		this.results = $('#results');
 		const height = imcHeight / 100;
-		this.imc = (imcWeight / (height * height)).toFixed(2);
+		const imc = (imcWeight / (height * height)).toFixed(2);
 
 		// Show results
-		this.showResult(this.imc);
+		this.showResult(imc);
 
 		// Clean the results and show the new results
 		if (this.results) {
@@ -43,7 +43,7 @@ class IMC extends Forms {
 	}
 
 	showResult(imc) {
-		const results = document.createElement('div');
+		const resultDiv = document.createElement('div');
 		const imcDiv = document.createElement('div');
 		const imcResult = document.createElement('div');
 		const imcResultText = document.createElement('div');
@@ -69,8 +69,8 @@ class IMC extends Forms {
 			imcClass = 'text-danger';
 		}
 
-		results.setAttribute('id', 'results');
-		results.setAttribute('class', 'd-flex flex-column align-items-center py-2 px-4 mt-3 w-75');
+		resultDiv.setAttribute('id', 'results');
+		resultDiv.setAttribute('class', 'd-flex flex-column align-items-center py-2 px-4 mt-3 w-75');
 		imcDiv.setAttribute('class', 'd-flex justify-content-evenly border-2 border-bottom border-primary w-75');
 		imcResult.classList.add('fs-1', 'fw-bold', imcClass);
 		imcResult.innerText = imc;
@@ -79,7 +79,7 @@ class IMC extends Forms {
 
 		imcDiv.appendChild(imcResult);
 		imcDiv.appendChild(imcResultText);
-		results.appendChild(imcDiv);
+		resultDiv.appendChild(imcDiv);
 
 		span.setAttribute('class', 'my-2 text-center');
 		span.innerText = 'Información';
@@ -122,10 +122,10 @@ class IMC extends Forms {
 
 		divContainer.appendChild(imcInformation);
 		divContainer.appendChild(imcInformation2);
-		results.appendChild(span);
-		results.appendChild(divContainer);
+		resultDiv.appendChild(span);
+		resultDiv.appendChild(divContainer);
 
-		this.sectionForm.appendChild(results);
+		this.sectionForm.appendChild(resultDiv);
 	}
 }
 

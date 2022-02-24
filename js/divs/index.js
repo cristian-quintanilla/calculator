@@ -67,7 +67,7 @@ export const DATE_DIV = `
 		</div>
 
 		<div class='col-6 col-md-4 p-1'>
-			<input type='date' class='form-control' id='fromDate'>
+			<input type='date' class='form-control' id='fromDate' />
 		</div>
 
 		<div class='col-6 col-md-2 p-1'>
@@ -75,29 +75,11 @@ export const DATE_DIV = `
 		</div>
 
 		<div class='col-6 col-md-4 p-1'>
-			<input type='date' class='form-control' id='toDate'>
+			<input type='date' class='form-control' id='toDate' />
 		</div>
 
 		<div class='col d-grid p-1'>
-			<button class='btn btn-primary'>Calcular</button>
-		</div>
-	</div>
-
-	<div class='d-flex flex-column align-items-center gap-2 pt-2 pb-4 mt-3 w-75 card'>
-		<div class='fw-bold fs-2 text-primary'>Diferencia</div>
-		<div class='d-flex justify-content-evenly py-2 border-2 border-bottom border-top border-primary w-100'>
-			<div class='d-flex flex-column align-items-center'>
-				<span>Años</span>
-				<h3>0</h3>
-			</div>
-			<div class='d-flex flex-column align-items-center'>
-				<span>Meses</span>
-				<h3>0</h3>
-			</div>
-			<div class='d-flex flex-column align-items-center'>
-				<span>Días</span>
-				<h3>0</h3>
-			</div>
+			<button id='calculateDate' class='btn btn-primary'>Calcular</button>
 		</div>
 	</div>
 `;
