@@ -9,9 +9,6 @@ class Date extends Forms {
 			years: 31536000000,
 			months: 2628000000,
 			days: 86400000,
-			hours: 3600000,
-			minutes: 60000,
-			seconds: 1000,
 		}
 	}
 
@@ -59,24 +56,6 @@ class Date extends Forms {
 	}
 
 	showResult(years, months, days) {
-		// <div id='results' class='d-flex flex-column align-items-center gap-2 pt-2 pb-4 mt-3 w-75 card'>
-		// 	<div class='fw-bold fs-2 text-primary'>Diferencia</div>
-		// 	<div class='d-flex justify-content-evenly py-2 border-2 border-bottom border-top border-primary w-100'>
-		// 		<div class='d-flex flex-column align-items-center'>
-		// 			<span>Años</span>
-		// 			<h3>0</h3>
-		// 		</div>
-		// 		<div class='d-flex flex-column align-items-center'>
-		// 			<span>Meses</span>
-		// 			<h3>0</h3>
-		// 		</div>
-		// 		<div class='d-flex flex-column align-items-center'>
-		// 			<span>Días</span>
-		// 			<h3>0</h3>
-		// 		</div>
-		// 	</div>
-		// </div>
-
 		const resultDiv = document.createElement('div');
 		const diferenciaDiv = document.createElement('div');
 		const datosDiv = document.createElement('div');
