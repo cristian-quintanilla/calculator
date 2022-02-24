@@ -44,63 +44,18 @@ export const IMC_DIV = `
 	<div class='row'>
 		<div class='d-flex align-items-center col-12 col-md-6 p-1'>
 			<label for='imcWeight' class='flex-fill w-50'>Peso (KG):</label>
-			<input type='number' class='form-control w-75' id='imcWeight' placeholder='Peso...' />
+			<input id='imcWeight' type='number' class='form-control w-75' id='imcWeight' placeholder='Peso...' />
 		</div>
 
 		<div class='d-flex align-items-center col-12 col-md-6 p-1'>
 			<label for='imcHeight' class='flex-fill w-50'>Altura (CM):</label>
-			<input type='number' class='form-control w-75' id='imcHeight' placeholder='Altura...' />
+			<input id='imcHeight' type='number' class='form-control w-75' id='imcHeight' placeholder='Altura...' />
 		</div>
 
 		<div class='col d-grid p-2'>
-			<button class='btn btn-block btn-primary'>Calcular</button>
+			<button id='calculateIMC' class='btn btn-block btn-primary'>Calcular</button>
 		</div>
 	</div>
-
-	<!-- <div class='d-flex justify-content-center py-2 px-4 mt-3 w-75'>
-		<div class='d-flex justify-content-evenly border-2 border-bottom border-primary w-50'>
-			<div class='fs-1 fw-bold text-primary'>20.8</div>
-			<div>
-				<h5>IMC</h5>
-				<h6 class='fw-light'>Normal</h6>
-			</div>
-		</div>
-	</div>
-
-	<span class='my-2'>Información</span>
-
-	<div class='progress w-75' style='height: 22px'>
-		<div
-			class='progress-bar'
-			role='progressbar'
-			style='width: 33%'
-			aria-valuenow='33' aria-valuemin='0' aria-valuemax='100'>
-			Peso Bajo
-		</div>
-
-		<div
-			class='progress-bar bg-success'
-			role='progressbar'
-			style='width: 33%'
-			aria-valuenow='33' aria-valuemin='0' aria-valuemax='100'>
-			Peso Normal
-		</div>
-
-		<div
-			class='progress-bar bg-danger'
-			role='progressbar'
-			style='width: 33%'
-			aria-valuenow='33' aria-valuemin='0' aria-valuemax='100'>
-			Sobrepeso
-		</div>
-	</div>
-
-	<div class='d-flex justify-content-between w-50'>
-		<div class='fw-light'>16</div>
-		<div class='fw-light'>18.5</div>
-		<div class='fw-light'>25.0</div>
-		<div class='fw-light'>40.0</div>
-	</div>  -->
 `;
 
 export const DATE_DIV = `

@@ -1,6 +1,7 @@
 import { sectionForm } from './selectors';
 
 import Data from './classes/Data';
+import IMC from './classes/IMC';
 
 export function show(div, id) {
 	limpiarHTML();
@@ -14,9 +15,9 @@ function showForm(id) {
 		case 'dataDiv':
 			new Data();
 			break;
-		// case 'imcDiv':
-		// 	new IMC();
-		// 	break;
+		case 'imcDiv':
+			new IMC();
+			break;
 	}
 }
 
