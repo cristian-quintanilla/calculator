@@ -16,8 +16,11 @@ class IMC extends Forms {
 		const imcWeight = $('#imcWeight').value;
 		const imcHeight = $('#imcHeight').value;
 
-		if (imcWeight === '' && imcHeight === '') {
+		// Validations
+		if (imcWeight === '' || imcWeight <= 0) {
 			$('#imcWeight').classList.toggle('is-invalid');
+			return;
+		} else if (imcHeight === '' || imcHeight <= 0) {
 			$('#imcHeight').classList.toggle('is-invalid');
 			return;
 		}
@@ -25,9 +28,8 @@ class IMC extends Forms {
 		$('#imcWeight').classList.toggle('is-invalid', false);
 		$('#imcHeight').classList.toggle('is-invalid', false);
 
-		const height = imcHeight / 100;
-
 		this.results = $('#results');
+		const height = imcHeight / 100;
 		this.imc = (imcWeight / (height * height)).toFixed(2);
 
 		// Show results
@@ -112,7 +114,7 @@ class IMC extends Forms {
 		`;
 
 		imcInformation2.innerHTML = `
-			<div class='fw-light'>16</div>
+			<div class='fw-light'>16.0</div>
 			<div class='fw-light'>18.5</div>
 			<div class='fw-light'>25.0</div>
 			<div class='fw-light'>40.0</div>

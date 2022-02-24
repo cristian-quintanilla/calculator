@@ -44,12 +44,12 @@ export const IMC_DIV = `
 	<div class='row'>
 		<div class='d-flex align-items-center col-12 col-md-6 p-1'>
 			<label for='imcWeight' class='flex-fill w-50'>Peso (KG):</label>
-			<input id='imcWeight' type='number' class='form-control w-75' id='imcWeight' placeholder='Peso...' />
+			<input id='imcWeight' type='number' min='1' class='form-control w-75' placeholder='Peso...' />
 		</div>
 
 		<div class='d-flex align-items-center col-12 col-md-6 p-1'>
 			<label for='imcHeight' class='flex-fill w-50'>Altura (CM):</label>
-			<input id='imcHeight' type='number' class='form-control w-75' id='imcHeight' placeholder='Altura...' />
+			<input id='imcHeight' type='number' min='1' class='form-control w-75'placeholder='Altura...' />
 		</div>
 
 		<div class='col d-grid p-2'>
