@@ -30,21 +30,14 @@ class Volume extends Forms {
 		this.value_2 = `${ volumeValue } ${ toVolume }`;
 
 		// Convertions
-		/* m3, cm3, mm3, l, ml, cl, dl, hl, ft3, in3, yd3 */
+		/* m3, cm3, mm3, 		l, ml, cl, dl, hl, ft3, in3, yd3 */
 		if (fromVolume === 'm3') {
 			this.M3Convertions(volumeValue, toVolume);
+		} else if (fromVolume === 'cm3') {
+			this.CM3Convertions(volumeValue, toVolume);
+		} else if (fromVolume === 'mm3') {
+			this.MM3Convertions(volumeValue, toVolume);
 		}
-		// else if (fromValue === 'KB') {
-		// 	this.KBConvertions(dataValue, toValue, this.K);
-		// } else if (fromValue === 'MB') {
-		// 	this.MBConvertions(dataValue, toValue, this.K);
-		// } else if (fromValue === 'GB') {
-		// 	this.GBConvertions(dataValue, toValue, this.K);
-		// } else if (fromValue === 'TB') {
-		// 	this.TBConvertions(dataValue, toValue, this.K);
-		// } else if (fromValue === 'PB') {
-		// 	this.PBConvertions(dataValue, toValue, this.K);
-		// }
 
 		// Show results
 		this.showResult(this.value_1, this.value_2);
@@ -75,6 +68,50 @@ class Volume extends Forms {
 			this.value_2 = `${ volumeValue * 61024 } in3`;
 		} else if (toValue === 'yd3') {
 			this.value_2 = `${ volumeValue * 1.308 } yd3`;
+		}
+	}
+
+	CM3Convertions(volumeValue, toValue) {
+		if (toValue === 'm3') {
+			this.value_2 = `${ volumeValue / 1000000 } m3`;
+		} else if (toValue === 'mm3') {
+			this.value_2 = `${ volumeValue * 1000 } mm3`;
+		} else if (toValue === 'l') {
+			this.value_2 = `${ volumeValue / 1000 } l`;
+		} else if (toValue === 'cl') {
+			this.value_2 = `${ volumeValue / 10 } cl`;
+		} else if (toValue === 'dl') {
+			this.value_2 = `${ volumeValue / 100 } dl`;
+		} else if (toValue === 'hl') {
+			this.value_2 = `${ volumeValue / 100000 } hl`;
+		} else if (toValue === 'ft3') {
+			this.value_2 = `${ volumeValue / 28317 } ft3`;
+		} else if (toValue === 'in3') {
+			this.value_2 = `${ volumeValue / 16.387 } in3`;
+		}	else if (toValue === 'yd3') {
+			this.value_2 = `${ volumeValue / 764555 } yd3`;
+		}
+	}
+
+	MM3Convertions(volumeValue, toValue) {
+		if (toValue === 'm3') {
+			this.value_2 = `${ volumeValue / 1000000000 } m3`;
+		} else if (toValue === 'cm3' || toValue === 'ml') {
+			this.value_2 = `${ volumeValue / 1000 } ${ toValue }`;
+		} else if (toValue === 'l') {
+			this.value_2 = `${ volumeValue / 1000000 } l`;
+		} else if (toValue === 'cl') {
+			this.value_2 = `${ volumeValue / 10000 } cl`;
+		} else if (toValue === 'dl') {
+			this.value_2 = `${ volumeValue / 100000 } dl`;
+		} else if (toValue === 'hl') {
+			this.value_2 = `${ volumeValue / 100000000 } hl`;
+		} else if (toValue === 'ft3') {
+			this.value_2 = `${ volumeValue / 28320000 } ft3`;
+		} else if (toValue === 'in3') {
+			this.value_2 = `${ volumeValue / 16387 } in3`;
+		} else if (toValue === 'yd3') {
+			this.value_2 = `${ volumeValue / 764600000 } yd3`;
 		}
 	}
 
