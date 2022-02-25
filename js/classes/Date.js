@@ -5,7 +5,7 @@ class Date extends Forms {
 	constructor() {
 		super();
 		this.init();
-		this.convertions = {
+		this.Conversions = {
 			years: 31536000000,
 			months: 2628000000,
 			days: 86400000,
@@ -37,13 +37,13 @@ class Date extends Forms {
 
 		// Calculate the difference
 		let diff = Math.abs(toDate - fromDate);
-		const years = Math.floor(diff / this.convertions.years);
+		const years = Math.floor(diff / this.Conversions.years);
 
-		diff = diff - (years * this.convertions.years);
-		const months = Math.floor(diff / this.convertions.months)
+		diff = diff - (years * this.Conversions.years);
+		const months = Math.floor(diff / this.Conversions.months)
 
-		diff = diff - (months * this.convertions.months);
-		const days = Math.floor(diff / this.convertions.days)
+		diff = diff - (months * this.Conversions.months);
+		const days = Math.floor(diff / this.Conversions.days)
 
 		// Show results
 		this.showResult(years, months, days);

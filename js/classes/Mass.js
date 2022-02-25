@@ -13,7 +13,7 @@ class Mass extends Forms {
 	}
 
 	calculate() {
-		const fromValue = $('#fromMass').value;
+		const fromMass = $('#fromMass').value;
 		const toMass = $('#toMass').value;
 		const massValue = $('#massValue').value;
 
@@ -26,14 +26,20 @@ class Mass extends Forms {
 		$('#massValue').classList.toggle('is-invalid', false);
 
 		this.results = $('.results');
-		this.value_1 = `${ massValue } ${ fromValue }`;
+		this.value_1 = `${ massValue } ${ fromMass }`;
 		this.value_2 = `${ massValue } ${ toMass }`;
 
     // t, kg, g, mg, lb, oz
-		// Convertions
-		if (fromValue === 't') {
-			this.TConvertions(massValue, toMass);
-		}
+		// Conversions
+		if (fromMass === 't') {
+			this.TConversions(massValue, toMass);
+		} else if (fromMass === 'kg') {
+      this.KGConversions(massValue, toMass);
+    } else if (fromMass === 'g') {
+      this.GConversions(massValue, toMass);
+    } else if (fromMass === 'mg') {
+      this.MGConversions(massValue, toMass);
+    }
 
 		// Show results
 		this.showResult(this.value_1, this.value_2);
@@ -45,7 +51,7 @@ class Mass extends Forms {
 		}
 	}
 
-  TConvertions(massValue, toMass) {
+  TConversions(massValue, toMass) {
     if (toMass === 'kg') {
       this.value_2 = `${ massValue * 1000 } kg`;
     } else if (toMass === 'g') {
@@ -56,6 +62,48 @@ class Mass extends Forms {
       this.value_2 = `${ massValue * 2204.62 } lb`;
     } else if (toMass === 'oz') {
       this.value_2 = `${ massValue * 35273.962 } oz`;
+    }
+  }
+
+  KGConversions(massValue, toMass) {
+    if (toMass === 't') {
+      this.value_2 = `${ massValue / 1000 } t`;
+    } else if (toMass === 'g') {
+      this.value_2 = `${ massValue * 1000 } g`;
+    } else if (toMass === 'mg') {
+      this.value_2 = `${ massValue * 1000000 } mg`;
+    } else if (toMass === 'lb') {
+      this.value_2 = `${ massValue * 2.20462 } lb`;
+    } else if (toMass === 'oz') {
+      this.value_2 = `${ massValue * 35.27396 } oz`;
+    }
+  }
+
+  GConversions(massValue, toMass) {
+    if (toMass === 't') {
+      this.value_2 = `${ massValue / 1000000 } t`;
+    } else if (toMass === 'kg') {
+      this.value_2 = `${ massValue / 1000 } kg`;
+    } else if (toMass === 'mg') {
+      this.value_2 = `${ massValue * 1000 } mg`;
+    } else if (toMass === 'lb') {
+      this.value_2 = `${ massValue * 0.00220462 } lb`;
+    } else if (toMass === 'oz') {
+      this.value_2 = `${ massValue * 0.03527396 } oz`;
+    }
+  }
+
+  MGConversions(massValue, toMass) {
+    if (toMass === 't') {
+      this.value_2 = `${ massValue / 1000000000 } t`;
+    } else if (toMass === 'kg') {
+      this.value_2 = `${ massValue / 1000000 } kg`;
+    } else if (toMass === 'g') {
+      this.value_2 = `${ massValue / 1000 } g`;
+    } else if (toMass === 'lb') {
+      this.value_2 = `${ massValue * 0.0000220462 } lb`;
+    } else if (toMass === 'oz') {
+      this.value_2 = `${ massValue * 0.00003527396 } oz`;
     }
   }
 

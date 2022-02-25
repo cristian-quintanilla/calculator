@@ -30,19 +30,19 @@ class Data extends Forms {
 		this.value_1 = `${ dataValue } ${ fromValue }`;
 		this.value_2 = `${ dataValue } ${ toValue }`;
 
-		// Convertions
+		// Conversions
 		if (fromValue === 'B') {
-			this.ByteConvertions(dataValue, toValue, this.K);
+			this.ByteConversions(dataValue, toValue, this.K);
 		} else if (fromValue === 'KB') {
-			this.KBConvertions(dataValue, toValue, this.K);
+			this.KBConversions(dataValue, toValue, this.K);
 		} else if (fromValue === 'MB') {
-			this.MBConvertions(dataValue, toValue, this.K);
+			this.MBConversions(dataValue, toValue, this.K);
 		} else if (fromValue === 'GB') {
-			this.GBConvertions(dataValue, toValue, this.K);
+			this.GBConversions(dataValue, toValue, this.K);
 		} else if (fromValue === 'TB') {
-			this.TBConvertions(dataValue, toValue, this.K);
+			this.TBConversions(dataValue, toValue, this.K);
 		} else if (fromValue === 'PB') {
-			this.PBConvertions(dataValue, toValue, this.K);
+			this.PBConversions(dataValue, toValue, this.K);
 		}
 
 		// Show results
@@ -55,7 +55,7 @@ class Data extends Forms {
 		}
 	}
 
-	ByteConvertions(dataValue, toValue, K) {
+	ByteConversions(dataValue, toValue, K) {
 		if (toValue === 'KB') {
 			this.value_2 = `${ dataValue / K } KB`;
 		} else if (toValue === 'MB') {
@@ -69,7 +69,7 @@ class Data extends Forms {
 		}
 	}
 
-	KBConvertions(dataValue, toValue, K) {
+	KBConversions(dataValue, toValue, K) {
 		if (toValue === 'B') {
 			this.value_2 = `${ dataValue * K } B`;
 		} else if (toValue === 'MB') {
@@ -83,7 +83,7 @@ class Data extends Forms {
 		}
 	}
 
-	MBConvertions(dataValue, toValue, K) {
+	MBConversions(dataValue, toValue, K) {
 		if (toValue === 'B') {
 			this.value_2 = `${ dataValue * K * K } B`;
 		} else if (toValue === 'KB') {
@@ -97,7 +97,7 @@ class Data extends Forms {
 		}
 	}
 
-	GBConvertions(dataValue, toValue, K) {
+	GBConversions(dataValue, toValue, K) {
 		if (toValue === 'B') {
 			this.value_2 = `${ dataValue * K * K * K } B`;
 		} else if (toValue === 'KB') {
@@ -111,7 +111,7 @@ class Data extends Forms {
 		}
 	}
 
-	TBConvertions(dataValue, toValue, K) {
+	TBConversions(dataValue, toValue, K) {
 		if (toValue === 'B') {
 			this.value_2 = `${ dataValue * K * K * K * K } B`;
 		} else if (toValue === 'KB') {
@@ -125,7 +125,7 @@ class Data extends Forms {
 		}
 	}
 
-	PBConvertions(dataValue, toValue, K) {
+	PBConversions(dataValue, toValue, K) {
 		if (toValue === 'B') {
 			this.value_2 = `${ dataValue * K * K * K * K * K } B`;
 		} else if (toValue === 'KB') {

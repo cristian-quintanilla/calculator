@@ -29,29 +29,29 @@ class Volume extends Forms {
 		this.value_1 = `${ volumeValue } ${ fromVolume }`;
 		this.value_2 = `${ volumeValue } ${ toVolume }`;
 
-		// Convertions
+		// Conversions
 		if (fromVolume === 'm3') {
-			this.M3Convertions(volumeValue, toVolume);
+			this.M3Conversions(volumeValue, toVolume);
 		} else if (fromVolume === 'cm3') {
-			this.CM3Convertions(volumeValue, toVolume);
+			this.CM3Conversions(volumeValue, toVolume);
 		} else if (fromVolume === 'mm3') {
-			this.MM3Convertions(volumeValue, toVolume);
+			this.MM3Conversions(volumeValue, toVolume);
 		} else if (fromVolume === 'l') {
-			this.LConvertions(volumeValue, toVolume);
+			this.LConversions(volumeValue, toVolume);
 		} else if (fromVolume === 'ml') {
-			this.MLConvertions(volumeValue, toVolume);
+			this.MLConversions(volumeValue, toVolume);
 		} else if (fromVolume === 'cl') {
-			this.CLConvertions(volumeValue, toVolume);
+			this.CLConversions(volumeValue, toVolume);
 		} else if (fromVolume === 'dl') {
-			this.DLConvertions(volumeValue, toVolume);
+			this.DLConversions(volumeValue, toVolume);
 		} else if (fromVolume === 'hl') {
-			this.HLConvertions(volumeValue, toVolume);
+			this.HLConversions(volumeValue, toVolume);
 		} else if (fromVolume === 'ft3') {
-			this.FT3Convertions(volumeValue, toVolume);
+			this.FT3Conversions(volumeValue, toVolume);
 		} else if (fromVolume === 'in3') {
-			this.IN3Convertions(volumeValue, toVolume);
+			this.IN3Conversions(volumeValue, toVolume);
 		} else if (fromVolume === 'yd3') {
-			this.YD3Convertions(volumeValue, toVolume);
+			this.YD3Conversions(volumeValue, toVolume);
 		}
 
 		// Show results
@@ -64,7 +64,7 @@ class Volume extends Forms {
 		}
 	}
 
-	M3Convertions(volumeValue, toValue) {
+	M3Conversions(volumeValue, toValue) {
 		if (toValue === 'cm3' || toValue === 'ml') {
 			this.value_2 = `${ volumeValue * 1000000 } ${ toValue }`;
 		} else if (toValue === 'mm3') {
@@ -86,7 +86,7 @@ class Volume extends Forms {
 		}
 	}
 
-	CM3Convertions(volumeValue, toValue) {
+	CM3Conversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 1000000 } m3`;
 		} else if (toValue === 'mm3') {
@@ -108,7 +108,7 @@ class Volume extends Forms {
 		}
 	}
 
-	MM3Convertions(volumeValue, toValue) {
+	MM3Conversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 1000000000 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -130,7 +130,7 @@ class Volume extends Forms {
 		}
 	}
 
-	LConvertions(volumeValue, toValue) {
+	LConversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 1000 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -152,7 +152,7 @@ class Volume extends Forms {
 		}
 	}
 
-	MLConvertions(volumeValue, toValue) {
+	MLConversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 1000000 } m3`;
 		} else if (toValue === 'mm3') {
@@ -174,7 +174,7 @@ class Volume extends Forms {
 		}
 	}
 
-	CLConvertions(volumeValue, toValue) {
+	CLConversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 100000 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -196,7 +196,7 @@ class Volume extends Forms {
 		}
 	}
 
-	DLConvertions(volumeValue, toValue) {
+	DLConversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 10000 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -218,7 +218,7 @@ class Volume extends Forms {
 		}
 	}
 
-	HLConvertions(volumeValue, toValue) {
+	HLConversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 10 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -240,7 +240,7 @@ class Volume extends Forms {
 		}
 	}
 
-	FT3Convertions(volumeValue, toValue) {
+	FT3Conversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 35.315 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -262,7 +262,7 @@ class Volume extends Forms {
 		}
 	}
 
-	IN3Convertions(volumeValue, toValue) {
+	IN3Conversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 61024 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
@@ -284,7 +284,7 @@ class Volume extends Forms {
 		}
 	}
 
-	YD3Convertions(volumeValue, toValue) {
+	YD3Conversions(volumeValue, toValue) {
 		if (toValue === 'm3') {
 			this.value_2 = `${ volumeValue / 1.308 } m3`;
 		} else if (toValue === 'cm3' || toValue === 'ml') {
