@@ -46,6 +46,12 @@ class Volume extends Forms {
 			this.DLConvertions(volumeValue, toVolume);
 		} else if (fromVolume === 'hl') {
 			this.HLConvertions(volumeValue, toVolume);
+		} else if (fromVolume === 'ft3') {
+			this.FT3Convertions(volumeValue, toVolume);
+		} else if (fromVolume === 'in3') {
+			this.IN3Convertions(volumeValue, toVolume);
+		} else if (fromVolume === 'yd3') {
+			this.YD3Convertions(volumeValue, toVolume);
 		}
 
 		// Show results
@@ -231,6 +237,72 @@ class Volume extends Forms {
 			this.value_2 = `${ volumeValue * 6102 } in3`;
 		} else if (toValue === 'yd3') {
 			this.value_2 = `${ volumeValue / 7.646 } yd3`;
+		}
+	}
+
+	FT3Convertions(volumeValue, toValue) {
+		if (toValue === 'm3') {
+			this.value_2 = `${ volumeValue / 35.315 } m3`;
+		} else if (toValue === 'cm3' || toValue === 'ml') {
+			this.value_2 = `${ volumeValue * 28316.8 } ${ toValue }`;
+		} else if (toValue === 'mm3') {
+			this.value_2 = `${ volumeValue * 28316800 } mm3`;
+		} else if (toValue === 'l') {
+			this.value_2 = `${ volumeValue * 28.316 } l`;
+		} else if (toValue === 'cl') {
+			this.value_2 = `${ volumeValue * 2831.8 } cl`;
+		} else if (toValue === 'dl') {
+			this.value_2 = `${ volumeValue * 282.68 } dl`;
+		} else if (toValue === 'hl') {
+			this.value_2 = `${ volumeValue / 3.531 } hl`;
+		} else if (toValue === 'in3') {
+			this.value_2 = `${ volumeValue * 1728 } in3`;
+		} else if (toValue === 'yd3') {
+			this.value_2 = `${ volumeValue / 27 } yd3`;
+		}
+	}
+
+	IN3Convertions(volumeValue, toValue) {
+		if (toValue === 'm3') {
+			this.value_2 = `${ volumeValue / 61024 } m3`;
+		} else if (toValue === 'cm3' || toValue === 'ml') {
+			this.value_2 = `${ volumeValue * 16.387 } ${ toValue }`;
+		} else if (toValue === 'mm3') {
+			this.value_2 = `${ volumeValue * 16387 } mm3`;
+		} else if (toValue === 'l') {
+			this.value_2 = `${ volumeValue / 61.024 } l`;
+		} else if (toValue === 'cl') {
+			this.value_2 = `${ volumeValue * 1.639 } cl`;
+		} else if (toValue === 'dl') {
+			this.value_2 = `${ volumeValue / 6.102 } dl`;
+		} else if (toValue === 'hl') {
+			this.value_2 = `${ volumeValue / 6102 } hl`;
+		} else if (toValue === 'ft3') {
+			this.value_2 = `${ volumeValue / 1728 } ft3`;
+		} else if (toValue === 'yd3') {
+			this.value_2 = `${ volumeValue / 46656 } yd3`;
+		}
+	}
+
+	YD3Convertions(volumeValue, toValue) {
+		if (toValue === 'm3') {
+			this.value_2 = `${ volumeValue / 1.308 } m3`;
+		} else if (toValue === 'cm3' || toValue === 'ml') {
+			this.value_2 = `${ volumeValue * 764555 } ${ toValue }`;
+		} else if (toValue === 'mm3') {
+			this.value_2 = `${ volumeValue * 764600000 } mm3`;
+		} else if (toValue === 'l') {
+			this.value_2 = `${ volumeValue * 765 } l`;
+		} else if (toValue === 'cl') {
+			this.value_2 = `${ volumeValue * 76455 } cl`;
+		} else if (toValue === 'dl') {
+			this.value_2 = `${ volumeValue * 7646 } dl`;
+		} else if (toValue === 'hl') {
+			this.value_2 = `${ volumeValue * 7.646 } hl`;
+		} else if (toValue === 'ft3') {
+			this.value_2 = `${ volumeValue * 27 } ft3`;
+		} else if (toValue === 'in3') {
+			this.value_2 = `${ volumeValue * 46656 } in3`;
 		}
 	}
 
