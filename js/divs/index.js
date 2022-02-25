@@ -132,14 +132,6 @@ export const VOLUME_DIV = `
 			<button id='calculateVolume' class='btn btn-primary'>Calcular</button>
 		</div>
 	</div>
-
-	<!--
-	<div class='results bg-light py-2 px-4 mt-3 w-75 card'>
-		<div class='fw-bold fs-4 text-primary'>1 m3</div>
-		<span class='text-success fs-6'>es igual a</span>
-		<div class='fw-bold fs-4 text-primary'>1,000,000 cm3</div>
-	</div>
-	-->
 `;
 
 export const MASS_DIV = `
