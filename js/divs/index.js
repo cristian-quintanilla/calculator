@@ -139,11 +139,11 @@ export const MASS_DIV = `
 
 	<div class='row'>
 		<div class='col-6 col-md-3 p-1'>
-			<input type='number' class='form-control' value='1' min='1' />
+			<input id='massValue' type='number' class='form-control' value='1' min='1' />
 		</div>
 
 		<div class='col-6 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='fromMass' class='form-select'>
 				<option value='t'>Tonelada (t)</option>
 				<option value='kg'>Kilogramo (kg)</option>
 				<option value='g'>Gramo (g)</option>
@@ -158,7 +158,7 @@ export const MASS_DIV = `
 		</div>
 
 		<div class='col-12 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='toMass' class='form-select'>
 				<option value='t'>Tonelada (t)</option>
 				<option value='kg'>Kilogramo (kg)</option>
 				<option value='g'>Gramo (g)</option>
@@ -169,14 +169,8 @@ export const MASS_DIV = `
 		</div>
 
 		<div class='col d-grid p-1'>
-			<button class='btn btn-primary'>Calcular</button>
+			<button id='calculateMass' class='btn btn-primary'>Calcular</button>
 		</div>
-	</div>
-
-	<div class='results bg-light py-2 px-4 mt-3 w-75 card'>
-		<div class='fw-bold fs-4 text-primary'>1 kg</div>
-		<span class='text-success fs-6'>es igual a</span>
-		<div class='fw-bold fs-4 text-primary'>1,000 g</div>
 	</div>
 `;
 

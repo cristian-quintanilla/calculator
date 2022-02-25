@@ -3,6 +3,7 @@ import { sectionForm } from './selectors';
 import Data from './classes/Data';
 import DateClass from './classes/Date';
 import IMC from './classes/IMC';
+import Mass from './classes/Mass';
 import Volume from './classes/Volume';
 
 export function show(div, id) {
@@ -25,6 +26,9 @@ function showForm(id) {
 			break;
 		case 'volumeDiv':
 			new Volume();
+			break;
+		case 'massDiv':
+			new Mass();
 			break;
 	}
 }
