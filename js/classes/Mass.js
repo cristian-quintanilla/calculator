@@ -29,8 +29,7 @@ class Mass extends Forms {
 		this.value_1 = `${ massValue } ${ fromMass }`;
 		this.value_2 = `${ massValue } ${ toMass }`;
 
-    // t, kg, g, mg, lb, oz
-		// Conversions
+    // Conversions
 		if (fromMass === 't') {
 			this.TConversions(massValue, toMass);
 		} else if (fromMass === 'kg') {
@@ -39,6 +38,10 @@ class Mass extends Forms {
       this.GConversions(massValue, toMass);
     } else if (fromMass === 'mg') {
       this.MGConversions(massValue, toMass);
+    } else if (fromMass === 'lb') {
+      this.LBConversions(massValue, toMass);
+    } else if (fromMass === 'oz') {
+      this.OZConversions(massValue, toMass);
     }
 
 		// Show results
@@ -104,6 +107,34 @@ class Mass extends Forms {
       this.value_2 = `${ massValue * 0.0000220462 } lb`;
     } else if (toMass === 'oz') {
       this.value_2 = `${ massValue * 0.00003527396 } oz`;
+    }
+  }
+
+  LBConversions(massValue, toMass) {
+    if (toMass === 't') {
+      this.value_2 = `${ massValue / 2204.62 } t`;
+    } else if (toMass === 'kg') {
+      this.value_2 = `${ massValue / 2.20462 } kg`;
+    } else if (toMass === 'g') {
+      this.value_2 = `${ massValue * 453.592 } g`;
+    } else if (toMass === 'mg') {
+      this.value_2 = `${ massValue * 453592 } mg`;
+    } else if (toMass === 'oz') {
+      this.value_2 = `${ massValue * 16 } oz`;
+    }
+  }
+
+  OZConversions(massValue, toMass) {
+    if (toMass === 't') {
+      this.value_2 = `${ massValue / 35273.962 } t`;
+    } else if (toMass === 'kg') {
+      this.value_2 = `${ massValue / 35.27396 } kg`;
+    } else if (toMass === 'g') {
+      this.value_2 = `${ massValue * 28.3495 } g`;
+    } else if (toMass === 'mg') {
+      this.value_2 = `${ massValue * 28349.5 } mg`;
+    } else if (toMass === 'lb') {
+      this.value_2 = `${ massValue / 16 } lb`;
     }
   }
 
