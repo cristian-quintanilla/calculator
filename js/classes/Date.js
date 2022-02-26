@@ -22,10 +22,10 @@ class Date extends Forms {
 		const toDate = $('#toDate').valueAsDate;
 
 		// Validations
-		if (fromDate === '') {
+		if (!fromDate) {
 			$('#fromDate').classList.toggle('is-invalid');
 			return;
-		} else if (toDate === '') {
+		} else if (!toDate) {
 			$('#toDate').classList.toggle('is-invalid');
 			return;
 		}
