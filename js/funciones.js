@@ -1,5 +1,6 @@
 import { sectionForm } from './selectors';
 
+import Area from './classes/Area';
 import Data from './classes/Data';
 import DateClass from './classes/Date';
 import IMC from './classes/IMC';
@@ -29,6 +30,9 @@ function showForm(id) {
 			break;
 		case 'massDiv':
 			new Mass();
+			break;
+		case 'areaDiv':
+			new Area();
 			break;
 	}
 }

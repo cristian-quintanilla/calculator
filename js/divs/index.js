@@ -179,11 +179,11 @@ export const AREA_DIV = `
 
 	<div class='row'>
 		<div class='col-6 col-md-3 p-1'>
-			<input type='number' class='form-control' value='1' min='1' />
+			<input id='areaValue' type='number' class='form-control' value='1' min='1' />
 		</div>
 
 		<div class='col-6 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='fromArea' class='form-select'>
 				<option value='km2'>Kilómetro cuadrado (km2)</option>
 				<option value='ha'>Hectárea (ha)</option>
 				<option value='m2'>Metro cuadrado (m2)</option>
@@ -200,7 +200,7 @@ export const AREA_DIV = `
 		</div>
 
 		<div class='col-12 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='toArea' class='form-select'>
 				<option value='km2'>Kilómetro cuadrado (km2)</option>
 				<option value='ha'>Hectárea (ha)</option>
 				<option value='m2'>Metro cuadrado (m2)</option>
@@ -213,14 +213,8 @@ export const AREA_DIV = `
 		</div>
 
 		<div class='col d-grid p-1'>
-			<button class='btn btn-primary'>Calcular</button>
+			<button id='calculateArea' class='btn btn-primary'>Calcular</button>
 		</div>
-	</div>
-
-	<div class='results bg-light py-2 px-4 mt-3 w-75 card'>
-		<div class='fw-bold fs-4 text-primary'>1 m2</div>
-		<span class='text-success fs-6'>es igual a</span>
-		<div class='fw-bold fs-4 text-primary'>10,000 cm2</div>
 	</div>
 `;
 
