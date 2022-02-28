@@ -1,5 +1,5 @@
 import Forms from './Forms';
-import { $, area } from '../selectors';
+import { $ } from '../selectors';
 
 class Area extends Forms {
 	constructor() {
@@ -30,7 +30,6 @@ class Area extends Forms {
 		this.value_2 = `${ areaValue } ${ toArea }`;
 
 		// Conversions
-		// km2, ha, m2, cm2, mm2, in2, yd2, ft2
 		if (fromArea === 'km2') {
 			this.KM2Conversions(areaValue, toArea);
 		} else if (fromArea === 'ha') {
@@ -41,6 +40,12 @@ class Area extends Forms {
 			this.CM2Conversions(areaValue, toArea);
 		} else if (fromArea === 'mm2') {
 			this.MM2Conversions(areaValue, toArea);
+		} else if (fromArea === 'in2') {
+			this.IN2Conversions(areaValue, toArea);
+		} else if (fromArea === 'yd2') {
+			this.YD2Conversions(areaValue, toArea);
+		} else if (fromArea === 'ft2') {
+			this.FT2Conversions(areaValue, toArea);
 		}
 
 		// Show results
@@ -140,6 +145,60 @@ class Area extends Forms {
 			this.value_2 = `${ areaValue / 836127 } yd2`;
 		} else if (toArea === 'ft2') {
 			this.value_2 = `${ areaValue / 92903 } ft2`;
+		}
+	}
+
+	IN2Conversions(areaValue, toArea) {
+		if (toArea === 'km2') {
+			this.value_2 = `${ areaValue / 1550000000 } km2`;
+		} else if (toArea === 'ha') {
+			this.value_2 = `${ areaValue / 15500000 } ha`;
+		} else if (toArea === 'm2') {
+			this.value_2 = `${ areaValue / 1550 } m2`;
+		} else if (toArea === 'cm2') {
+			this.value_2 = `${ areaValue * 6.4516 } cm2`;
+		} else if (toArea === 'mm2') {
+			this.value_2 = `${ areaValue * 645.16 } mm2`;
+		} else if (toArea === 'yd2') {
+			this.value_2 = `${ areaValue / 1296 } yd2`;
+		} else if (toArea === 'ft2') {
+			this.value_2 = `${ areaValue / 144 } ft2`;
+		}
+	}
+
+	YD2Conversions(areaValue, toArea) {
+		if (toArea === 'km2') {
+			this.value_2 = `${ areaValue / 1196000 } km2`;
+		} else if (toArea === 'ha') {
+			this.value_2 = `${ areaValue / 11960 } ha`;
+		} else if (toArea === 'm2') {
+			this.value_2 = `${ areaValue / 1.196 } m2`;
+		} else if (toArea === 'cm2') {
+			this.value_2 = `${ areaValue * 8361 } cm2`;
+		} else if (toArea === 'mm2') {
+			this.value_2 = `${ areaValue * 836127 } mm2`;
+		} else if (toArea === 'in2') {
+			this.value_2 = `${ areaValue * 1296 } in2`;
+		} else if (toArea === 'ft2') {
+			this.value_2 = `${ areaValue * 9 } ft2`;
+		}
+	}
+
+	FT2Conversions(areaValue, toArea) {
+		if (toArea === 'km2') {
+			this.value_2 = `${ areaValue / 10760000 } km2`;
+		} else if (toArea === 'ha') {
+			this.value_2 = `${ areaValue / 107639 } ha`;
+		} else if (toArea === 'm2') {
+			this.value_2 = `${ areaValue / 10.764 } m2`;
+		} else if (toArea === 'cm2') {
+			this.value_2 = `${ areaValue * 929.0304 } cm2`;
+		} else if (toArea === 'mm2') {
+			this.value_2 = `${ areaValue * 92903.04 } mm2`;
+		} else if (toArea === 'in2') {
+			this.value_2 = `${ areaValue * 144 } in2`;
+		} else if (toArea === 'yd2') {
+			this.value_2 = `${ areaValue / 9 } yd2`;
 		}
 	}
 }
