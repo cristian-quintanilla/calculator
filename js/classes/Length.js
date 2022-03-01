@@ -30,7 +30,6 @@ class Length extends Forms {
 		this.value_2 = `${ lengthValue } ${ toLength }`;
 
 		// Conversions
-		// km m cm mm in ft yd mi
 		if (fromLength === 'km') {
 			this.KMConversions(lengthValue, toLength);
 		} else if (fromLength === 'm') {
@@ -39,6 +38,14 @@ class Length extends Forms {
 			this.CMConversions(lengthValue, toLength);
 		} else if (fromLength === 'mm') {
 			this.MMConversions(lengthValue, toLength);
+		} else if (fromLength === 'in') {
+			this.INConversions(lengthValue, toLength);
+		} else if (fromLength === 'ft') {
+			this.FTConversions(lengthValue, toLength);
+		} else if (fromLength === 'yd') {
+			this.YDConversions(lengthValue, toLength);
+		} else if (fromLength === 'mi') {
+			this.MIConversions(lengthValue, toLength);
 		}
 
 		// Show results
@@ -120,6 +127,78 @@ class Length extends Forms {
 			this.value_2 = `${ lengthValue / 914.4 } yd`;
 		} else if (toLength === 'mi') {
 			this.value_2 = `${ lengthValue / 1609344 } mi`;
+		}
+	}
+
+	INConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue / 39370.079 } km`;
+		} else if (toLength === 'm') {
+			this.value_2 = `${ lengthValue / 39.370079 } m`;
+		} else if (toLength === 'cm') {
+			this.value_2 = `${ lengthValue * 2.54 } cm`;
+		} else if (toLength === 'mm') {
+			this.value_2 = `${ lengthValue * 25.4 } mm`;
+		} else if (toLength === 'ft') {
+			this.value_2 = `${ lengthValue / 12 } ft`;
+		} else if (toLength === 'yd') {
+			this.value_2 = `${ lengthValue / 36 } yd`;
+		} else if (toLength === 'mi') {
+			this.value_2 = `${ lengthValue / 63360 } mi`;
+		}
+	}
+
+	FTConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue / 3280.84 } km`;
+		} else if (toLength === 'm') {
+			this.value_2 = `${ lengthValue / 3.28084 } m`;
+		} else if (toLength === 'cm') {
+			this.value_2 = `${ lengthValue * 30.48 } cm`;
+		} else if (toLength === 'mm') {
+			this.value_2 = `${ lengthValue * 304.8 } mm`;
+		} else if (toLength === 'in') {
+			this.value_2 = `${ lengthValue * 12 } in`;
+		} else if (toLength === 'yd') {
+			this.value_2 = `${ lengthValue / 3 } yd`;
+		} else if (toLength === 'mi') {
+			this.value_2 = `${ lengthValue / 5280 } mi`;
+		}
+	}
+
+	YDConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue / 1093.613 } km`;
+		} else if (toLength === 'm') {
+			this.value_2 = `${ lengthValue / 1.093613 } m`;
+		} else if (toLength === 'cm') {
+			this.value_2 = `${ lengthValue * 91.44 } cm`;
+		} else if (toLength === 'mm') {
+			this.value_2 = `${ lengthValue * 914.4 } mm`;
+		} else if (toLength === 'in') {
+			this.value_2 = `${ lengthValue * 36 } in`;
+		} else if (toLength === 'ft') {
+			this.value_2 = `${ lengthValue * 3 } ft`;
+		} else if (toLength === 'mi') {
+			this.value_2 = `${ lengthValue / 1760 } mi`;
+		}
+	}
+
+	MIConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue * 1.60934 } km`;
+		} else if (toLength === 'm') {
+			this.value_2 = `${ lengthValue * 1609.34 } m`;
+		} else if (toLength === 'cm') {
+			this.value_2 = `${ lengthValue * 160934 } cm`;
+		} else if (toLength === 'mm') {
+			this.value_2 = `${ lengthValue * 1609344 } mm`;
+		} else if (toLength === 'in') {
+			this.value_2 = `${ lengthValue * 63360 } in`;
+		} else if (toLength === 'ft') {
+			this.value_2 = `${ lengthValue * 5280 } ft`;
+		} else if (toLength === 'yd') {
+			this.value_2 = `${ lengthValue * 1760 } yd`;
 		}
 	}
 }
