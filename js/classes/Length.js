@@ -33,6 +33,12 @@ class Length extends Forms {
 		// km m cm mm in ft yd mi
 		if (fromLength === 'km') {
 			this.KMConversions(lengthValue, toLength);
+		} else if (fromLength === 'm') {
+			this.MConversions(lengthValue, toLength);
+		} else if (fromLength === 'cm') {
+			this.CMConversions(lengthValue, toLength);
+		} else if (fromLength === 'mm') {
+			this.MMConversions(lengthValue, toLength);
 		}
 
 		// Show results
@@ -60,6 +66,60 @@ class Length extends Forms {
 			this.value_2 = `${ lengthValue * 1093.613 } yd`;
 		} else if (toLength === 'mi') {
 			this.value_2 = `${ lengthValue / 1.60934 } mi`;
+		}
+	}
+
+	MConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue / 1000 } km`;
+		} else if (toLength === 'cm') {
+			this.value_2 = `${ lengthValue * 100 } cm`;
+		} else if (toLength === 'mm') {
+			this.value_2 = `${ lengthValue * 1000 } mm`;
+		} else if (toLength === 'in') {
+			this.value_2 = `${ lengthValue * 39.3701 } in`;
+		} else if (toLength === 'ft') {
+			this.value_2 = `${ lengthValue * 3.28084 } ft`;
+		} else if (toLength === 'yd') {
+			this.value_2 = `${ lengthValue * 1.093616 } yd`;
+		} else if (toLength === 'mi') {
+			this.value_2 = `${ lengthValue / 1609.344 } mi`;
+		}
+	}
+
+	CMConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue / 100000 } km`;
+		} else if (toLength === 'm') {
+			this.value_2 = `${ lengthValue / 100 } m`;
+		} else if (toLength === 'mm') {
+			this.value_2 = `${ lengthValue * 10 } mm`;
+		} else if (toLength === 'in') {
+			this.value_2 = `${ lengthValue / 2.54 } in`;
+		} else if (toLength === 'ft') {
+			this.value_2 = `${ lengthValue / 30.48 } ft`;
+		} else if (toLength === 'yd') {
+			this.value_2 = `${ lengthValue / 91.44 } yd`;
+		} else if (toLength === 'mi') {
+			this.value_2 = `${ lengthValue / 160934.4 } mi`;
+		}
+	}
+
+	MMConversions(lengthValue, toLength) {
+		if (toLength === 'km') {
+			this.value_2 = `${ lengthValue / 1000000 } km`;
+		} else if (toLength === 'm') {
+			this.value_2 = `${ lengthValue / 1000 } m`;
+		} else if (toLength === 'cm') {
+			this.value_2 = `${ lengthValue / 10 } cm`;
+		} else if (toLength === 'in') {
+			this.value_2 = `${ lengthValue / 25.4 } in`;
+		} else if (toLength === 'ft') {
+			this.value_2 = `${ lengthValue / 304.8 } ft`;
+		} else if (toLength === 'yd') {
+			this.value_2 = `${ lengthValue / 914.4 } yd`;
+		} else if (toLength === 'mi') {
+			this.value_2 = `${ lengthValue / 1609344 } mi`;
 		}
 	}
 }
