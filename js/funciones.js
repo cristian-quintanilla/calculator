@@ -4,6 +4,7 @@ import Area from './classes/Area';
 import Data from './classes/Data';
 import DateClass from './classes/Date';
 import IMC from './classes/IMC';
+import Length from './classes/Length';
 import Mass from './classes/Mass';
 import Volume from './classes/Volume';
 
@@ -33,6 +34,9 @@ function showForm(id) {
 			break;
 		case 'areaDiv':
 			new Area();
+			break;
+		case 'lengthDiv':
+			new Length();
 			break;
 	}
 }
