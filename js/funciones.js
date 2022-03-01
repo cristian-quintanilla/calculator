@@ -6,6 +6,7 @@ import DateClass from './classes/Date';
 import IMC from './classes/IMC';
 import Length from './classes/Length';
 import Mass from './classes/Mass';
+import Temperature from './classes/Temperature';
 import Volume from './classes/Volume';
 
 export function show(div, id) {
@@ -37,6 +38,9 @@ function showForm(id) {
 			break;
 		case 'lengthDiv':
 			new Length();
+			break;
+		case 'temperatureDiv':
+			new Temperature();
 			break;
 	}
 }

@@ -267,11 +267,11 @@ export const TEMPERATURE_DIV = `
 
 	<div class='row'>
 		<div class='col-6 col-md-3 p-1'>
-			<input type='number' class='form-control' value='1' min='1' />
+			<input id='temperatureValue' type='number' class='form-control' value='1' min='1' />
 		</div>
 
 		<div class='col-6 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='fromTemperature' class='form-select'>
 				<option value='c'>Celsius (c)</option>
 				<option value='f'>Fahrenheit (f)</option>
 				<option value='k'>Kelvin (k)</option>
@@ -283,7 +283,7 @@ export const TEMPERATURE_DIV = `
 		</div>
 
 		<div class='col-12 col-md-3 p-1'>
-			<select class='form-select'>
+			<select id='toTemperature' class='form-select'>
 				<option value='c'>Celsius (c)</option>
 				<option value='f'>Fahrenheit (f)</option>
 				<option value='k'>Kelvin (k)</option>
@@ -291,13 +291,7 @@ export const TEMPERATURE_DIV = `
 		</div>
 
 		<div class='col d-grid p-1'>
-			<button class='btn btn-primary'>Calcular</button>
+			<button id='calculateTemperature' class='btn btn-primary'>Calcular</button>
 		</div>
-	</div>
-
-	<div class='results bg-light py-2 px-4 mt-3 w-75 card'>
-		<div class='fw-bold fs-4 text-primary'>1 °C</div>
-		<span class='text-success fs-6'>es igual a</span>
-		<div class='fw-bold fs-4 text-primary'>33.8 °F</div>
 	</div>
 `;
