@@ -1,6 +1,6 @@
 # Calculator.
 #### Calculadora para diferentes conversiones, entre otras cosas.
-
+##### _Por el momento no se encuentra responsivo._
 
 ### **Utilidades de la calculadora.**
 * Convierte unidades de almacenamiento, volúmen, masa, área, longitud y temperatura.
